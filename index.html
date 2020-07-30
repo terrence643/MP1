@@ -2,17 +2,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="MP1.css">
         <title>Document</title>
+        <div class="darkheader">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <a class="Title">Machine Project 1</a>
+                </div>
+            </nav>
+        </div>
     </head>
 
         <body>
-
-            
-        
-
-
-
-
 
             <!-- The core Firebase JS SDK is always required and must be listed first -->
             <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -44,19 +45,21 @@
 
                 var db = firebase.firestore();
 
-                db.collection("education").get().then(function(snapshot){
+                
+                // Make for loop to get project Links to show
+                db.collection("projects").get().then(function(snapshot){
                     snapshot.forEach(function(doc){
                         console.log(doc.data())
                     })
 
                 });
                 // Object to be added
-                var OrgObject={
-                    name:"JEMA",
-                    position: "Member",
-                    year_start:2018,
-                    year_end:2019
-                }
+                // var OrgObject={ 
+                //     name:"JEMA",
+                //     position: "Member",
+                //     year_start:2018,
+                //     year_end:2019
+                // }
                 // For Adding of Object
             //     db.collection("organizations").add(OrgObject).then(function(doc){
             //         console.log("Item added with the UID"+doc.id);
@@ -73,8 +76,6 @@
 
                     // make text box login
                     
-                    var email ="terrence_cai@dlsu.edu.ph";
-                    var password="Long123!";
                         //Checks for user authentication
                          firebase.auth().signInWithEmailAndPassword(email,password).then(function(user){
                             console.log("user signed in");
@@ -91,6 +92,9 @@
                          });
 
             </script>
+
+            <div class="Proj"></div>
+
 
         </body>
 </html>
