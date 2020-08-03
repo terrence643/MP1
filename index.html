@@ -1,101 +1,88 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="MP1.css">
-        <title>Document</title>
-        <div class="darkheader">
-            <div class="container">
-                <a class="Title">Machine Project 1</a>
-            </div>
-        </div>
-    </head>
+<!DOCTYPE html>
+<html>
 
-        <body>
+<style>
+    html{
+        height: auto;
+        width: 100%;
+    }
+</style>
 
-            <!-- The core Firebase JS SDK is always required and must be listed first -->
-            <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-            
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>MP_FINAL_FINAL</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
 
-            <!-- TODO: Add SDKs for Firebase products that you want to use
-                https://firebase.google.com/docs/web/setup#available-libraries -->
-            <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<body style="background: url(https://i.pinimg.com/originals/bf/b3/2c/bfb32c4b6fbeb0a0040e594e43d92a98.jpg);background-repeat: no-repeat;background-size: cover;">
+       
+     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
-            <script>
-                // TO DO:
-                // 1.make log in as user input
-                // 2.fix website
-                // 3.
-                // Your web app's Firebase configuration
-                var firebaseConfig = {
-                    apiKey: "AIzaSyDiD8DWQqxAr09m3hEVi4q-lLr3Axv1zws",
-                    authDomain: "terrence-cai-mp1.firebaseapp.com",
-                    databaseURL: "https://terrence-cai-mp1.firebaseio.com",
-                    projectId: "terrence-cai-mp1",
-                    storageBucket: "terrence-cai-mp1.appspot.com",
-                    messagingSenderId: "192497593700",
-                    appId: "1:192497593700:web:67099555474c534ff45e71",
-                    measurementId: "G-PV24YKEZR7"
-                };
-                // Initialize Firebase
-                var defaultProject = firebase.initializeApp(firebaseConfig);
+     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    
+     <script>
+     var firebaseConfig = {
+        apiKey: "AIzaSyDiD8DWQqxAr09m3hEVi4q-lLr3Axv1zws",
+        authDomain: "terrence-cai-mp1.firebaseapp.com",
+        databaseURL: "https://terrence-cai-mp1.firebaseio.com",
+        projectId: "terrence-cai-mp1",
+        storageBucket: "terrence-cai-mp1.appspot.com",
+        messagingSenderId: "192497593700",
+        appId: "1:192497593700:web:67099555474c534ff45e71",
+        measurementId: "G-PV24YKEZR7"
+    };
+    var defaultProject = firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    </script>
+    
+    <script src="Get Documents.js"></script>
 
-                var db = firebase.firestore();
+    <div class="navbar">
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link" href="#About" style="color: white;background-color: #14213d;border-color: #dee2e6 #dee2e6 #fff;">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Education" style="color: white;background-color: #14213d;border-color: #dee2e6 #dee2e6 #fff;">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Projects" style="color: white;background-color: #14213d;border-color: #dee2e6 #dee2e6 #fff;">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Orgs" style="color: white;background-color: #14213d;border-color: #dee2e6 #dee2e6 #fff;">Organizations</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Contact" style="color: white;background-color: #14213d;border-color: #dee2e6 #dee2e6 #fff;">Contact Me</a></li>
+        </ul>
+    </div>
+    <div class="container" id="Name" style="justify-content: center;display: flex;">
+        <h1 style="color: white;">Terrence Jake S. Cai</h1>
+    </div>
 
-                
-                // Make for loop to get project Links to show
-                db.collection("projects").get().then(function(snapshot){
-                    snapshot.forEach(function(doc){
-                        console.log(doc.data())
-                    })
+    <div class="container" id="About" style="box-shadow: 3px 3px 0px 0px black;background-color: #fca311;">
+        <h1>About Me</h1>
+        <p></p>
+    </div>
 
-                });
-                // Object to be added
-                // var OrgObject={ 
-                //     name:"JEMA",
-                //     position: "Member",
-                //     year_start:2018,
-                //     year_end:2019
-                // }
-                // For Adding of Object
-            //     db.collection("organizations").add(OrgObject).then(function(doc){
-            //         console.log("Item added with the UID"+doc.id);
-                //   })
-                
+    <div class="container" id="Education" style="box-shadow: 3px 3px 0px 0px black;background-color: #fca311;">
+        <h1>My Education Background</h1>
+        <div id="Educ-list"></div>
+        
+    </div>
 
-                // For Deleting of Object
-                // db.collection("organizations").doc("fIVAxlBsJLBGLAUJvejr").delete().then(function(){
-                //     console.log("Item Deleted");
-                // Shows error message if there is an error
-                // }).catch(function(error){
-                //     console.log("Error in deleting item"+error);
-                // })
+    <div class="container" id="Projects" style="box-shadow: 3px 3px 0px 0px black;background-color: #fca311;">
+        <h1>My Projects</h1>
+        <div id="Proj-list"></div>
+    </div>
 
-                    email="courtney.ngo@dlsu.edu.ph"
-                    password="abcd1234"
+    <div class="container" id="Orgs" style="box-shadow: 3px 3px 0px 0px black;background-color: #fca311;">
+        <h1>My Organizations</h1>
+        <div id="Org-list"></div>
+    </div>
 
-                    // make text box login
-                    
-                        //Checks for user authentication
-                         firebase.auth().signInWithEmailAndPassword(email,password).then(function(user){
-                            console.log("user signed in");
+    <div class="container" id="Contact" style="box-shadow: 3px 3px 0px 0px black;background-color: #fca311;">
+        <h1>Contact Me</h1>
+        <div id="cont-list"></div>
+    </div>
 
-                            var user= firebase.auth().currentUser;
-                            if (user!=null){
-                                console.log(user.email);
-                            }
-                         }).catch(function(error){
-                             if(error.code=="auth/wrong-password")
-                                alert("wrong password")
-                            else
-                                alert(error.message);
-                         });
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
-            </script>
 
-            <div class="Proj">Projects Included:</div>
-            <div class="Educ">Educational Attainment</div>
+</body>
 
-        </body>
 </html>

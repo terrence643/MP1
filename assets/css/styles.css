@@ -1,19 +1,77 @@
-#about:hover {
-  color: rgb(140,0,0)!important;
-  text-decoration: underline;
+.container {
+    margin-bottom: 50px;
+    padding-bottom: 10px;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  background-color: transparent;
-  font-size: 25px;
+div.Cards{
+    box-shadow: 4px 4px 0px 0px black;
+    background-color: white;
+    margin: 10px 10px 10px 10px;
 }
 
-.Navbar#container {
-  width: 100%!important;
-  margin-right: 0px!important;
-  margin-left: 0px!important;
-  padding: 0px!important;
+div.navbar{
+    position:fixed;
 }
 
+
+div.ContainerEduc{
+    box-shadow: 4px 4px 0px 0px black;
+    background-color: white;
+    margin: 10px 10px 10px 10px;
+    transition: .5s;
+    
+}
+div.ContainerEduc:hover{
+    box-shadow: 4px 4px 0px 0px black;
+    background-color:gray;
+    color: white;
+    transform: scale(1.2);
+}
+
+div.ContainerProj{
+    box-shadow: 4px 4px 0px 0px black;
+    background-color: white;
+    margin: 10px 10px 10px 10px;
+    transition: .5s;
+    color: black;
+   
+}
+a:hover{
+    text-decoration: none;
+}
+
+div.ContainerProj:hover{
+    box-shadow: 4px 4px 0px 0px black;
+    background-color:gray;
+    color: white;
+    transform: scale(1.2);
+}
+
+div.ContainerOrg{
+    box-shadow: 4px 4px 0px 0px black;
+    background-color: white;
+    margin: 10px 10px 10px 10px;
+    transition: .5s;
+    
+}
+div.ContainerOrg:hover{
+    box-shadow: 4px 4px 0px 0px black;
+    background-color:gray;
+    color: white;
+    transform: scale(1.2);
+}
+
+div.Containercon{
+    box-shadow: 4px 4px 0px 0px black;
+    background-color: white;
+    color: black;
+    margin: 10px 10px 10px 10px;
+    transition: .5s;
+    
+}
+div.Containercon:hover{
+    box-shadow: 4px 4px 0px 0px black;
+    background-color:gray;
+    color: white;
+    transform: scale(1.2);
+}
