@@ -14,9 +14,10 @@
     <title>MP_FINAL_FINAL</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
-<body style="background: url(https://i.pinimg.com/originals/bf/b3/2c/bfb32c4b6fbeb0a0040e594e43d92a98.jpg);background-repeat: no-repeat;background-size: cover;">
+<body style="background-color: #b4b4af;background-size: cover;">
        
      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
@@ -38,50 +39,51 @@
     var db = firebase.firestore();
     </script>
     
-    <script src="Get Documents.js"></script>
+    
 
     <div class="navbar">
         <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link" href="#About" style="color: white;background-color: #14213d;border-color: #dee2e6 #dee2e6 #fff;">About Me</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Education" style="color: white;background-color: #14213d;border-color: #dee2e6 #dee2e6 #fff;">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Projects" style="color: white;background-color: #14213d;border-color: #dee2e6 #dee2e6 #fff;">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Orgs" style="color: white;background-color: #14213d;border-color: #dee2e6 #dee2e6 #fff;">Organizations</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Contact" style="color: white;background-color: #14213d;border-color: #dee2e6 #dee2e6 #fff;">Contact Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="#About" style="color: white;background-color: #7dbbb9;border-color: #dee2e6 #dee2e6 #fff;">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Education" style="color: white;background-color: #7dbbb9;border-color: #dee2e6 #dee2e6 #fff;">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Projects" style="color: white;background-color: #7dbbb9;border-color: #dee2e6 #dee2e6 #fff;">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Orgs" style="color: white;background-color: #7dbbb9;border-color: #dee2e6 #dee2e6 #fff;">Organizations</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Contact" style="color: white;background-color: #7dbbb9;border-color: #dee2e6 #dee2e6 #fff;">Contact Me</a></li>
         </ul>
     </div>
     <div class="container" id="Name" style="justify-content: center;display: flex;">
         <h1 style="color: white;">Terrence Jake S. Cai</h1>
     </div>
 
-    <div class="container" id="About" style="box-shadow: 3px 3px 0px 0px black;background-color: #fca311;">
+    <div class="container" id="About" style="box-shadow: 3px 3px 0px 0px black;background-color: #bad5dc;">
         <h1>About Me</h1>
-        <p></p>
+        <div id="containerAbout"></div>
     </div>
 
-    <div class="container" id="Education" style="box-shadow: 3px 3px 0px 0px black;background-color: #fca311;">
+    <div class="container" id="Education" style="box-shadow: 3px 3px 0px 0px black;background-color: #bad5dc;">
         <h1>My Education Background</h1>
         <div id="Educ-list"></div>
         
     </div>
 
-    <div class="container" id="Projects" style="box-shadow: 3px 3px 0px 0px black;background-color: #fca311;">
+    <div class="container" id="Projects" style="box-shadow: 3px 3px 0px 0px black;background-color: #bad5dc;">
         <h1>My Projects</h1>
         <div id="Proj-list"></div>
     </div>
 
-    <div class="container" id="Orgs" style="box-shadow: 3px 3px 0px 0px black;background-color: #fca311;">
+    <div class="container" id="Orgs" style="box-shadow: 3px 3px 0px 0px black;background-color: #bad5dc;">
         <h1>My Organizations</h1>
+
         <div id="Org-list"></div>
     </div>
 
-    <div class="container" id="Contact" style="box-shadow: 3px 3px 0px 0px black;background-color: #fca311;">
+    <div class="container" id="Contact" style="box-shadow: 3px 3px 0px 0px black;background-color: #bad5dc;">
         <h1>Contact Me</h1>
         <div id="cont-list"></div>
     </div>
 
+    <script src="GetDocument.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-
 
 </body>
 

@@ -1,37 +1,33 @@
 .container {
     margin-bottom: 50px;
     padding-bottom: 10px;
-}
-
-div.Cards{
-    box-shadow: 4px 4px 0px 0px black;
-    background-color: white;
-    margin: 10px 10px 10px 10px;
+    border-radius: 15px 15px 15px 15px;
 }
 
 div.navbar{
     position:fixed;
 }
 
-
 div.ContainerEduc{
     box-shadow: 4px 4px 0px 0px black;
-    background-color: white;
+    background-color: #7dbbb9;
     margin: 10px 10px 10px 10px;
+    border-radius: 15px 15px 15px 15px;
     transition: .5s;
     
 }
 div.ContainerEduc:hover{
     box-shadow: 4px 4px 0px 0px black;
-    background-color:gray;
-    color: white;
-    transform: scale(1.2);
+    background-color:#d8d3d0;
+    color: black;
+    transform: scale(1.0);
 }
 
 div.ContainerProj{
     box-shadow: 4px 4px 0px 0px black;
-    background-color: white;
+    background-color: #7dbbb9;
     margin: 10px 10px 10px 10px;
+    border-radius: 15px 15px 15px 15px;
     transition: .5s;
     color: black;
    
@@ -42,36 +38,131 @@ a:hover{
 
 div.ContainerProj:hover{
     box-shadow: 4px 4px 0px 0px black;
-    background-color:gray;
-    color: white;
-    transform: scale(1.2);
+    background-color:#d8d3d0;
+    color: black;
+    transform: scale(1.0);
 }
 
 div.ContainerOrg{
     box-shadow: 4px 4px 0px 0px black;
-    background-color: white;
+    background-color: #7dbbb9;
     margin: 10px 10px 10px 10px;
+    border-radius: 15px 15px 15px 15px;
     transition: .5s;
     
 }
 div.ContainerOrg:hover{
     box-shadow: 4px 4px 0px 0px black;
-    background-color:gray;
-    color: white;
-    transform: scale(1.2);
+    background-color:#d8d3d0;
+    color: black;
+    transform: scale(1.0);
 }
 
 div.Containercon{
     box-shadow: 4px 4px 0px 0px black;
-    background-color: white;
+    background-color: #7dbbb9;
     color: black;
     margin: 10px 10px 10px 10px;
+    border-radius: 15px 15px 15px 15px;
     transition: .5s;
     
 }
 div.Containercon:hover{
     box-shadow: 4px 4px 0px 0px black;
-    background-color:gray;
-    color: white;
-    transform: scale(1.2);
+    background-color:#d8d3d0;
+    color: black;
+    transform: scale(1.0);
+}
+
+button#add{
+    float:right;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+}
+
+.mhead, h4{
+    background-color: #5cb85c;
+    color:white !important;
+    text-align: center;
+    font-size 30px;
+
+}
+.modal{
+    height: 25%;
+    width: 25%;
+    background-color: white;
+    text-align: center;
+}
+
+button#add{
+    background-color: transparent;
+    background: red;
+}
+
+div#containerAbout{
+    display: flex;
+    column-count: 2;
+    box-shadow: 4px 4px 0px 0px black;
+    background-color: #7dbbb9;
+    margin: 10px 10px 10px 10px;
+    border-radius: 15px 15px 15px 15px;
+    transition: .5s;
+}
+div#containerAbout:hover{
+    background-color: #d8d3d0;
+}
+#Logged{
+    display: none;
+}
+
+#Login{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 10px 10px 10px 10px;
+}
+#Logbutton{
+    border-radius: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 0px;
+    background-color: #7dbbb9;
+}
+div.logdiv{
+    margin: 10px 10px 10px 0px;
+}
+button#edit{
+    background-color: transparent;
+}
+
+.textbox{
+    display: none;
+    margin-left: 20px;
+}
+.savebut{
+    display: none;
+    background-color:transparent;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 20px;
+}
+
+.cancelbut{
+    display: none;
+    background-color:transparent;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 20px;
+}
+.editer{
+    float:right;
+    background-color:transparent;
+    border-radius: 15px 15px 15px 15px;
+}
+#chart_profile{
+    margin-left: 20px;
+    width: 25%;
+}
+#textdiv{
+    width:70%;
+}
+.paragraph{
+    margin-left: 20px;
 }
