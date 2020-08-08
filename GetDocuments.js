@@ -287,11 +287,25 @@ function rendercontact(doc){
 
     let con_anch = document.createElement('a');
     let con_anch_div=document.createElement('div');
+    let editbutton=document.createElement('button');
+    editbutton.classList.add('editer');
+    editbutton.textContent="Edit";
     con_anch.href=doc.data().contact;
     let con_div = document.createElement('div');
     con_div.classList.add('Containercon');
-
+    con_div.setAttribute('data-id',doc.id)
+    let textarea=document.createElement('textarea');
+    textarea.classList.add('textbox');
+    textarea.id='textscont';
+    let savebutton=document.createElement('button');
+    savebutton.classList.add('savebut');
+    let cancelbutton=document.createElement('button');
+    cancelbutton.classList.add('cancelbut');
+    savebutton.textContent="Save";
+    cancelbutton.textContent="Cancel";
     
+    
+    textarea.textContent=doc.data().contact;
     let name=document.createElement('div');
 
 
@@ -302,23 +316,48 @@ function rendercontact(doc){
     //con_div.innerHTML += " <a href='"+doc.data().contact+"'>"+doc.data().name+"</a>";
     con_div.textContent = doc.data().name;
 
+    con_div.appendChild(editbutton);
+    con_div.appendChild(textarea);
+    con_div.appendChild(savebutton);
+    con_div.appendChild(cancelbutton);
     con_anch.appendChild(con_anch_div);
     con_div.appendChild(name);
     con_div.appendChild(con_anch);
 
     document.getElementById('cont-list').appendChild(con_div);
 
+    editbutton.addEventListener('click', e=>{
+        $('.textbox').toggle();
+        $('.savebut').toggle();
+        $('.cancelbut').toggle();
+    })
 
+    savebutton.addEventListener('click', e=>{
+        let id=e.currentTarget.parentNode.getAttribute('data-id');
+        db.collection("Contact").doc(id).update({
+            contact: document.getElementById('textscont').value
+        }).then(function(){
+            collectContact();
+        })
+        
+    })
+    cancelbutton.addEventListener('click',e=>{
+        collectContact();
+    })
 }
 
-db.collection("Contact").get().then(function(snapshot) {
+
+
+function collectContact(){
+    document.getElementById('cont-list').innerHTML = '';
+    db.collection("Contact").get().then(function(snapshot) {
     snapshot.docs.forEach(function(doc){
         rendercontact(doc);
     })
 }).catch(function(Error){
     console.log(Error)
 })
-
+}
 
 
 function authentication(){
@@ -335,6 +374,7 @@ function authentication(){
             collectEduc();
             collectOrg();
             collectProj();
+            collectContact();
             
             
             $('#Logged').toggle();

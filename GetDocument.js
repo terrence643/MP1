@@ -1,15 +1,20 @@
 function renderAbout(doc){
-    let div = document.createElement('div');
+    let div = document.getElementById('textdivid');
+    div.classList.add('textdivclass');
+    div.setAttribute('data-id',doc.id)
     let para = document.createElement('p');
+    para.classList.add('paragraph')
     let checkdiv = document.createElement('div');
 
 
     para.textContent=doc.data().Intro;
 
     div.appendChild(para);
-    div.appendChild(checkdiv);
+    div.appendChild(checkdiv);    
+
 
     document.getElementById('containerAbout').appendChild(div);
+
 }
 
 db.collection("Introduction").get().then(function(snapshot) {
@@ -138,12 +143,12 @@ function rendercontact(doc){
     con_anch.href=doc.data().contact;
     let con_div = document.createElement('div');
     con_div.classList.add('Containercon');
-
+    con_div.setAttribute('data-id',doc.id)
+    
     
     let name=document.createElement('div');
 
 
-    
     con_div.setAttribute('data-id',doc.id);
     con_div.textContent=doc.data().name;
     con_anch_div.textContent="Click here Contact Me";
