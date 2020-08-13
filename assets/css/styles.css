@@ -14,6 +14,8 @@ div.ContainerEduc{
     margin: 10px 10px 10px 10px;
     border-radius: 15px 15px 15px 15px;
     transition: .5s;
+    padding-left: 25px;
+    padding-bottom: 25px;
     
 }
 div.ContainerEduc:hover{
@@ -30,7 +32,8 @@ div.ContainerProj{
     border-radius: 15px 15px 15px 15px;
     transition: .5s;
     color: black;
-   
+    padding-left: 25px;
+    padding-bottom: 25px;
 }
 a:hover{
     text-decoration: none;
@@ -49,7 +52,8 @@ div.ContainerOrg{
     margin: 10px 10px 10px 10px;
     border-radius: 15px 15px 15px 15px;
     transition: .5s;
-    
+    padding-left: 25px;
+    padding-bottom: 25px;
 }
 div.ContainerOrg:hover{
     box-shadow: 4px 4px 0px 0px black;
@@ -65,7 +69,8 @@ div.Containercon{
     margin: 10px 10px 10px 10px;
     border-radius: 15px 15px 15px 15px;
     transition: .5s;
-    
+    padding-left: 25px;
+    padding-bottom: 25px;
 }
 div.Containercon:hover{
     box-shadow: 4px 4px 0px 0px black;
@@ -85,14 +90,24 @@ button#add{
     background-color: #5cb85c;
     color:white !important;
     text-align: center;
-    font-size 30px;
-
+    font-size: 30px;
+}
+.modal-open .modal{
+    padding-right:0 !important;
+}
+.mbody{
+    box-shadow: 4px 4px 0px 0px black;
 }
 .modal{
-    height: 25%;
-    width: 25%;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     background-color: white;
     text-align: center;
+    justify-content: center;
 }
 
 button#add{

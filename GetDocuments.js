@@ -22,6 +22,8 @@ function renderAbout(doc){
     let textarea=document.createElement('textarea');
     textarea.classList.add('textbox');
     textarea.id='texts';
+    textarea.style.width="800px";
+    textarea.style.height="200px";
     let savebutton=document.createElement('button');
     savebutton.classList.add('savebut');
     let cancelbutton=document.createElement('button');
@@ -45,6 +47,7 @@ function renderAbout(doc){
 
     document.getElementById('containerAbout').appendChild(div);
     editbutton.addEventListener('click', e=>{
+        $('.paragraph').toggle();
         $('.textbox').toggle();
         $('.savebut').toggle();
         $('.cancelbut').toggle();
